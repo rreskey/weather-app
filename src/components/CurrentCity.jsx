@@ -23,7 +23,7 @@ export default function CurrentCity() {
                 <img style={{width: '60px'}} src={parameters?.map?.img}/>
                 <h1 className='ms-2'>{info.city}</h1>
             </div>
-            <Button className='my-2 mx-auto w-50' onClick={() => setModalOpen(true)}>Wrong city?</Button>
+            <Button variant='warning' className='my-2 mx-auto w-50' onClick={() => setModalOpen(true)}>Wrong city?</Button>
             {modalOpen? <ChangeCityModal modal={modalOpen} closeModal={closeModal}/>: null} 
             <Stack direction='horizontal' className='d-inline-flex justify-content-center align-items-center gap-2'>
                 <h2>{Math.round(data.main.temp)}</h2>
